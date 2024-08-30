@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "8fe7f871-9bc0-4c37-9a60-46ad58319e45",
+		"name": "XYZ-FINANCE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14726699",
+		"_collection_link": "https://schoolmedia-3634.postman.co/workspace/Schoolmedia-Workspace~3675e824-5680-4753-a190-4ace00c0c1f8/collection/14726699-8fe7f871-9bc0-4c37-9a60-46ad58319e45?action=share&source=collection_link&creator=14726699"
+	},
+	"item": [
+		{
+			"name": "get customer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Api-Key",
+						"value": "1n1_4p1_Key",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create customer",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Api-Key",
+						"value": "1n1_4p1_Key",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "NIK",
+							"value": "3511061312020001",
+							"type": "text"
+						},
+						{
+							"key": "FullName",
+							"value": "Adim Gozali",
+							"type": "text"
+						},
+						{
+							"key": "LegalName",
+							"value": "Adim Gozali",
+							"type": "text"
+						},
+						{
+							"key": "PlaceOfBirth",
+							"value": "Bondowoso",
+							"type": "text"
+						},
+						{
+							"key": "DateOfBirth",
+							"value": "2024-08-29",
+							"type": "text"
+						},
+						{
+							"key": "Salary",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "IDCardPhoto",
+							"type": "file",
+							"src": "/Users/adgnop/Documents/Screenshot 2024-08-21 at 16.32.44.png"
+						},
+						{
+							"key": "SelfiePhoto",
+							"type": "file",
+							"src": "/Users/adgnop/Documents/Screenshot 2024-08-21 at 16.33.00.png"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all customer limit",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Api-Key",
+						"value": "1n1_4p1_Key",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/customer-limits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer-limits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create customer limit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Api-Key",
+						"value": "1n1_4p1_Key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CustomerID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "Term",
+							"value": "2",
+							"description": "month, example 1 (for 1 month)",
+							"type": "text"
+						},
+						{
+							"key": "Amount",
+							"value": "100000",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer-limits/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer-limits",
+						"create"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Api-Key",
+						"value": "1n1_4p1_Key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CustomerID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "AdminFee",
+							"value": "10000",
+							"type": "text"
+						},
+						{
+							"key": "InstallmentAmount",
+							"value": "900000",
+							"type": "text"
+						},
+						{
+							"key": "InterestAmount",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "AssetName",
+							"value": "HP OPPO",
+							"type": "text"
+						},
+						{
+							"key": "Status",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Term",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "BillingDate",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/transactions/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactions",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paid transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Api-Key",
+						"value": "1n1_4p1_Key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ContractNumber",
+							"value": "XYZ-884355072681",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/transactions/paid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactions",
+						"paid"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

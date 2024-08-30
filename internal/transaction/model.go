@@ -20,5 +20,5 @@ type Transaction struct {
 	BillingDate        time.Time
 	UpdatedAt  time.Time `gorm:"autoUpdateTime"`
 	CreatedAt  time.Time `gorm:"autoCreateTime"` 
-	CustomerLimit []customerlimit.CustomerLimit `gorm:"foreignKey:CustomerID" json:"customer_limit,omitempty"`
+	CustomerLimit    customerlimit.CustomerLimit `gorm:"foreignKey:CustomerLimitID" json:"customer_limit,omitempty"`
 }

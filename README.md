@@ -25,5 +25,5 @@ To start the application, run the following command:
 
 bash
 Copy code
-go run main.go
+go run cmd/main.go
 The application will start running on the default port specified in your code.
